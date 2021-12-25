@@ -1,0 +1,84 @@
+input[type="search"]{
+    border: 1px solid rgb(219, 219, 219);
+    width: 800px;
+    height: 38px;
+    padding: 0 15px;
+
+}
+form{
+    position: relative;
+}
+button[type="submit"]{
+    position: absolute;
+    top: 0;
+    bottom:0;
+    right: 0;
+    border: none;
+    background-color: #a7ce3e;
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar li a{
+    color: #000;
+    font-size: 14px;
+    text-align: center;
+
+}
+.navbar{
+    box-shadow: 0 10px 20px 0 rgba(5,16,44,.15);S
+
+}
+
+
+.navbar li a:hover{
+    font-size: 17px;
+    color:#a7ce3e;
+    transition: all 0.5s ease;
+} 
+
+.navbar2{
+    background-color: #D3D3D3;
+
+}
+.field-icon{
+	position: absolute;
+	cursor: default;
+	text-align: center !important;
+	top: 2px;
+	left: 0;
+	width: 44px;
+	font-size: 22px;
+	line-height: 1.7em;
+}
+
+.vl {
+    border-left: 2px solid rgb(179, 177, 177);
+    /*padding-top: 50px;*/
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+  }
+.register-content{
+ box-shadow: 0 10px 20px 0 rgba(5,16,44,.15);;
+ height: 500px;
+}
+
+.form-content input{
+    border: none;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.15);
+}
+.already .btn-login{
+    float: right;
+}
+.forgot-password{
+	float: right;
+	color: #a7ce3e;
+	font-style: italic;
+	margin-right: 35px;
+}
+.carousel-inner{
+    height: 88vh;
+}
