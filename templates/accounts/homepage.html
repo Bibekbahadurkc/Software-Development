@@ -1,0 +1,205 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>Homepage</title>
+{% endblock title %}
+
+{% block main_content %}
+<section class="main">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-controls">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-image:url({% static 'images/guitar1.jpg' %}) " ></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style="background-image:url({% static 'images/guitar2.jpg' %})"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" style="background-image:url({% static 'images/guitar.jpg' %})"></button>
+        </div>
+
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image:url({% static 'images/guitar1.jpg' %})">
+
+        </div>
+        <div class="carousel-item" style="background-image:url({% static 'images/guitar2.jpg' %})">
+
+        </div>
+        <div class="carousel-item" style="background-image:url({% static 'images/guitar.jpg' %})">
+
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+  </section>
+
+
+
+  <!-- ------------------------------------------------about---------------------------------------------------------------- -->
+  <section id="about" class="about-section" style="background:url({% static 'images/gg.png' %}) no-repeat left; background-size:68%" >
+    <div class="inner-container">
+      <h1>
+        About Us
+        <div class="border">
+
+        </div>
+      </h1>
+      <q>Every change begins with a step</q><br></br>
+      <p class="text">
+        Khelauna is a platform in a country like ours which doesn’t has proper knowledge in upbringing of kids and are not willing to spend large amount of money to get educational stuffs and toys to children  and on the other hand people who are capable of buying a lot of toys will have a clutter free house and could be able to make an earning through the toys that are just making clutter in their house hold and bring balance overall and will somehow result in decreased demand of plastic which are very hard to recycle . 
+
+
+      </p>
+      <a href="/about">
+          <button class="btnn" type="submit">Read More
+             <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+
+        </a>
+
+    </div>
+
+  </section>
+
+
+
+
+<!-- ---------------------------------------------------------Product---------------------------------------------------------- -->
+  <div class="store_image" style=" min-height:35vh;">
+
+            <h1 class="storess mt-5">PRODUCTS</h1>
+                 <p class="pp">Buy toys / books / Educational materials</p>
+                  <p class="pp">Option for donation also available</p>
+
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col py-3 py-sm-0">
+
+
+                    <div class="row justify-content-around">
+                         {% for file in files %}
+                        <div class="col-md-4 product-items">
+                            <div class="product">
+
+
+                            <div class="product-content">
+                                <div class = "product-img">
+                                <img src = "/{{file.file}}" alt = "product image">
+                               </div>
+                            </div>
+
+                            <div class="card-body shadow">
+                                <a href = "#" class = "product-name">{{file.title}}</a>
+                                <div class="productp">
+                                    <p>Brands:{{file.brand}}</p>
+                              <p>Price:${{file.price}}</p>
+
+                                </div>
+
+
+                              <a href="/admins/product_detail/{{file.id}}"><button type="button" class="btnn">
+
+                                  VIEW DETAIL
+                                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+
+                            </button></a>
+                                <div class="off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                        </div>
+
+                    {% endfor %}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-- -------------------------------------------------------Buy Now------------------------------------------------------------ -->
+  <section id="buynow" class="join">
+    <div class="container ">
+      <div class="row">
+
+        <div class="col-sm-6 mt-5 ">
+          <div class="join1">
+            <h1 class="fs-1">Khelauna 'Just not parenting but sustainable parenting'</h1>
+          <p >Khelauna ensures all the products that are delivered are in one piece and in these times we make sure toys are properly sanitized .</p>
+
+          </div>
+          <a href="/admins/show_store">
+            <button class="join_btnn">Shop Now
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+
+          </a>
+
+        </div>
+        <div class="san col-sm-6  mt-1" >
+          <img src="{% static 'images/join2.png' %}" class="img-fluid" alt="">
+
+        </div>
+
+
+
+      </div>
+    </div>
+
+  </section>
+
+<!-- ------------------------------------------Brands---------------------------------------- -->
+
+  <section id="brand" class="brands"  >
+    <div class="container">
+      <h1 class="heading text-center font-weight-bold">Brands we are associated</h1>
+      <section class="customer-logos slider">
+          <div class="slide"><img src="{% static 'images/brands1.png' %}" alt="logo"></div>
+          <div class="slide"><img src="{% static 'images/brands2.png' %}" alt="logo"></div>
+          <div class="slide"><img src="{% static 'images/brands3.png' %}"  alt="logo"></div>
+          <div class="slide"><img src="{% static 'images/brands4.png' %}" alt="logo"></div>
+          <div class="slide"><img src="{% static 'images/brands5.png' %}" alt="logo"></div>
+          <div class="slide"><img src="{% static 'images/brands6.png' %}" alt="logo"></div>
+          <div class="slide"><img src="{% static 'images/brands7.png' %}" alt="logo"></div>
+
+      </section>
+  </div>
+  </section>
+
+
+<!-- -----------------------------------------------buy Now------------------------------------------------ -->
+  <section class="buy"  style="  background:linear-gradient(75deg, rgb(6 6 6 / 64%) 8%, transparent),url({% static 'images/now.jpg' %});background-repeat: no-repeat;
+
+    background-attachment: fixed;
+    background-size: cover;
+    height: 75vh;">
+    <div class="buy1">
+        <h1>Buy from Khelauna</h1>
+        <p> Khelauna makes the process of purchasing used toys very convenient as purchasing a new toy and provide parents various advantages by giving them opportunities to save a little more and reduce a little more clutter in the house hold . As these days kids are occupied by technology this might also be solution for bringing things in balance such that they get an opportunity by providing access  to large volume of toys and study materials which will further boost their imagination . Khelauna is expected not only to be a boon in parenting but its going to be a boon in sustainable parenting which begins from you and your household .
+        </p>
+    </div>
+  </section >
+{% endblock main_content %}
+
+
+

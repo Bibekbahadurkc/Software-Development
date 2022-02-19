@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>About Us page</title>
+{% endblock title %}
+
+{% block main_content %}
+
+    <section class="about">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-controls">
+
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-image:url({% static 'images/about5.jpg' %})" ></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style="background-image:url({% static 'images/guitar7.jpg' %})"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" style="background-image:url({% static 'images/about4.jpg' %})"></button>
+            </div>
+
+          </div>
+
+
+
+
+          <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image:url({% static 'images/about5.jpg' %}) ;">
+
+            </div>
+            <div class="carousel-item" style="background-image:url({% static 'images/guitar7.jpg' %})">
+
+            </div>
+            <div class="carousel-item" style="background-image:url({% static 'images/about4.jpg' %})">
+
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+
+      </section>
+
+
+      <section class="aboutus1">
+          <q>Reuse for a sustainable world</q>
+          <h2>
+            Know Us Bettter
+            <div class="border"></div>
+          </h2><br>
+          <q>Not just parenting but sustainable parenting</q><br></br>
+          <P></P>
+
+            <p>
+              Khelauna is basically a online platform where parents will be able to upload various information of toys online such that they could be linked to another parent who can further buy those used toys . As we know no matter how much excited a kid gets while he/she gets a new toy chances are the toy will end up in corner of the room within few days and on long term a lot of toys will get collected in house hold which are unused . It not only helps kids by providing them new toys along with there changing age along with chances of learning from a variety of learning materials  but will also help parents make some money from toys that are unused eventually leading to usage of less plastic materials towards a better environment .
+          
+            </p>
+            <P>As these days kids are occupied by technology this might also be solution for bringing things in balance such that they get an opportunity by providing access  to large volume of toys and study materials which will further boost their imagination . Khelauna is expected not only to be a boon in parenting but its going to be a boon in sustainable parenting which begins from you and your household .
+
+            </P>
+
+            <p>Make sure you give our services a go and let us know us your experiences</p>
+
+
+
+
+</section>
+
+{% endblock main_content %}
